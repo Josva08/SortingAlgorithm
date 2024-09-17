@@ -6,7 +6,7 @@ int[]listToSort = new int[5];
 void setup() {
   listToSort = shuffel(listToSort);
   list = mySort(list);
-  printArray(mySort(listToSort));
+  printArray(list);
 }
 
 void draw() {
@@ -30,8 +30,9 @@ int[] mySort(int[] list) {
         int temp=list[i];
         list[i]=list[i+1];
         list[i+1]=temp;
-      } else {
         done=false;
+      } else {
+        done=true;
       }
     }
   }
